@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 on:
   # Ejecutar en pushes a la rama 'gaPrueba'
   push:
-    branches: ["main"]
+    branches: ["gaPrueba"]
 
   # Permite ejecutar este flujo de trabajo manualmente desde la pestaña Actions
   workflow_dispatch:
@@ -35,9 +35,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Sube index.html y hola.html
-          path: 'index.html'
-          path: 'hola.html'
+          # Sube todo el contenido del repositorio
+          path: '.'
       
       - name: Deploy to GitHub Pages
         id: deployment
