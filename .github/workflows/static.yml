@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 on:
   # Ejecutar en pushes a la rama 'gaPrueba'
   push:
-    branches: ["gaPrueba"]
+    branches: ["main"]
 
   # Permite ejecutar este flujo de trabajo manualmente desde la pestaña Actions
   workflow_dispatch:
